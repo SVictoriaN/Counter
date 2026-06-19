@@ -19,14 +19,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ovA-Zo-Euh">
-                                <rect key="frame" x="10" y="118" width="373" height="76"/>
+                                <rect key="frame" x="16" y="138" width="361" height="20"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v8E-V4-Wvb">
-                                <rect key="frame" x="10" y="694" width="373" height="80"/>
-                                <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                <rect key="frame" x="16" y="301" width="170.66666666666666" height="34"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.01666666667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" imagePadding="13">
                                     <imageReference key="image" image="plus" catalog="system" symbolScale="large" renderingMode="hierarchical-single">
@@ -41,40 +41,88 @@
                                     <action selector="incrementButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4GE-tr-dzS"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eot-pM-LER">
+                                <rect key="frame" x="16" y="368" width="361" height="35"/>
+                                <color key="backgroundColor" red="0.68235294120000001" green="0.68627450980000004" blue="0.70588235290000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <imageReference key="image" image="arrow.counterclockwise" catalog="system" symbolScale="large"/>
+                                    <color key="baseForegroundColor" red="0.1019607843" green="0.1058823529" blue="0.1333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="resetButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oqL-4e-kpQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wAQ-0k-FdI">
+                                <rect key="frame" x="206.66666666666663" y="300" width="170.33333333333337" height="35"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <imageReference key="image" image="minus" catalog="system" symbolScale="large"/>
+                                    <color key="baseForegroundColor" red="0.1019607843" green="0.1058823529" blue="0.1333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="decrementButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ot0-gD-sAt"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="QVU-A9-Ftp">
+                                <rect key="frame" x="16" y="433" width="361" height="351"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="ovA-Zo-Euh" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="7jG-85-7qv"/>
-                            <constraint firstItem="v8E-V4-Wvb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="EX4-Jx-DvN"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ovA-Zo-Euh" secondAttribute="trailing" constant="10" id="Kq3-gQ-KFJ"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ovA-Zo-Euh" secondAttribute="bottom" constant="590" id="L7J-6W-PfM"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="v8E-V4-Wvb" secondAttribute="trailing" constant="10" id="MIL-hV-ZsR"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="v8E-V4-Wvb" secondAttribute="bottom" constant="10" id="hvt-m4-EbD"/>
-                            <constraint firstItem="v8E-V4-Wvb" firstAttribute="top" secondItem="ovA-Zo-Euh" secondAttribute="bottom" constant="500" id="pTq-NV-c8s"/>
-                            <constraint firstItem="ovA-Zo-Euh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="xIF-m2-ArS"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="QVU-A9-Ftp" secondAttribute="trailing" constant="16" id="2N6-h6-Aki"/>
+                            <constraint firstItem="eot-pM-LER" firstAttribute="top" secondItem="v8E-V4-Wvb" secondAttribute="bottom" constant="33" id="44f-yy-7Tm"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="centerX" secondItem="v8E-V4-Wvb" secondAttribute="trailing" constant="10" id="75g-8G-YJp"/>
+                            <constraint firstItem="QVU-A9-Ftp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="9q6-Fk-dLj"/>
+                            <constraint firstItem="eot-pM-LER" firstAttribute="top" secondItem="wAQ-0k-FdI" secondAttribute="bottom" constant="33" id="A2f-oS-vVz"/>
+                            <constraint firstItem="wAQ-0k-FdI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="centerX" constant="10" id="IJI-2N-nUe"/>
+                            <constraint firstItem="QVU-A9-Ftp" firstAttribute="top" secondItem="eot-pM-LER" secondAttribute="bottom" constant="30" id="Mdk-Qy-mIo"/>
+                            <constraint firstItem="ovA-Zo-Euh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Nqh-zB-1js"/>
+                            <constraint firstItem="v8E-V4-Wvb" firstAttribute="top" secondItem="ovA-Zo-Euh" secondAttribute="bottom" constant="143" id="Uqh-HN-xIO"/>
+                            <constraint firstItem="v8E-V4-Wvb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="bJh-uN-rwd"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ovA-Zo-Euh" secondAttribute="trailing" constant="16" id="ffU-DK-FWF"/>
+                            <constraint firstItem="eot-pM-LER" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="gdz-mO-RuY"/>
+                            <constraint firstItem="wAQ-0k-FdI" firstAttribute="top" secondItem="ovA-Zo-Euh" secondAttribute="bottom" constant="142" id="mQf-NH-CpZ"/>
+                            <constraint firstItem="QVU-A9-Ftp" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="p19-Jt-YfD"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="eot-pM-LER" secondAttribute="trailing" constant="16" id="uI0-GA-Aae"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="wAQ-0k-FdI" secondAttribute="trailing" constant="16" id="y5j-md-dS0"/>
+                            <constraint firstItem="ovA-Zo-Euh" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="y9h-U4-gPG"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="counterLabel" destination="ovA-Zo-Euh" id="zjq-vM-9Is"/>
+                        <outlet property="decrementButton" destination="wAQ-0k-FdI" id="xeZ-ij-gKO"/>
+                        <outlet property="historyTextView" destination="QVU-A9-Ftp" id="BXF-d3-oF6"/>
                         <outlet property="incrementButton" destination="v8E-V4-Wvb" id="X2v-Wg-Ypa"/>
+                        <outlet property="resetButton" destination="eot-pM-LER" id="cev-Wb-Ptd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="82" y="96"/>
+            <point key="canvasLocation" x="81.679389312977094" y="95.774647887323951"/>
         </scene>
     </scenes>
     <resources>
+        <image name="arrow.counterclockwise" catalog="system" width="110" height="128"/>
+        <image name="minus" catalog="system" width="128" height="26"/>
         <image name="plus" catalog="system" width="128" height="113"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="secondaryLabelColor">
             <color red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
-        <systemColor name="systemGray5Color">
-            <color red="0.8980392157" green="0.8980392157" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.53333333329999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="tertiaryLabelColor">
             <color red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.29803921570000003" colorSpace="custom" customColorSpace="sRGB"/>
